@@ -1,0 +1,23 @@
+<div class="body">
+    <img src="{{filePath}}">
+
+    <div class="buttons">
+        <button (click)="handlePrev()">Prev</button>
+        <button (click)="handleNext()">Next</button>
+    </div>
+
+    <div class="buttons">
+        <select (change)="handleDropdownClick($event)">
+
+            @for (n of numbersArr; track $index) {
+                <option value="{{n}}" (click)="handleDropdownClick(n)">{{n}}</option>
+            }
+        </select>
+        <!-- <select onmousedown="if(this.options.length>5){this.size=5;}" onchange="this.blur()"  onblur="this.size=0;">
+
+            @for (n of numbersArr; track $index) {
+                <option value="{{n}}" (click)="handleDropdownClick(n)">{{n}}</option>
+            }
+        </select> -->
+    </div>
+</div>
