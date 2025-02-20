@@ -1,5 +1,25 @@
 # Csf31t
 
+## Commands
+Build angular app: `ng build`
+
+### Deployment
+
+#### Vercel
+1. `vercel`
+2. Directory located in `./dist`
+
+#### Spring boot
+Copy the `/browser` folder into Spring boot's `static/` folder. 
+
+Not recommended because Spring boot is more for displaying dynamic content.
+
+#### caddy
+1. Create a deployment folder (elsewhere) and copy the `browser/` folder into it. 
+2. Create a Caddyfile in `deployment/`
+3. Copy `error.html` file in the `dist/day31t/browser` into `browser/` file.
+4. `caddy run --config Caddyfile`
+
 ## Notes
 Keep components dumb, and store app state in app root.
 
